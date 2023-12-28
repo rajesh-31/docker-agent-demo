@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image'){
             steps{
                 echo "Build Docker Image"
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: '$DOCKER_PASS', usernameVariable: '$DOCKER_USER')]){
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]){
                     sh "docker build -t $DOCKER_USER/$IMAGE_NAME:$IMAGE_VERSION ."  
                 }
                 
