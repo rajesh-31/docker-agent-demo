@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage('checkout'){
             steps{
-                checkout poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vcjain/docker-agent-demo.git']])
+                checkout poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajesh-31/docker-agent-demo.git']])
             }    
         }
         stage('Build Image'){
