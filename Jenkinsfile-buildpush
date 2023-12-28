@@ -1,7 +1,7 @@
 pipeline {
     
     agent {
-        label 'ssh'
+        label 'java-ssh'
     }
     
     stages{
